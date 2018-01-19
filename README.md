@@ -1,3 +1,3 @@
 # calebfabian.com
 
-(https://calebfabian.com/)
+https://calebfabian.com/
