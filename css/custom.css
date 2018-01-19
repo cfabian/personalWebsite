@@ -1,0 +1,43 @@
+.navbar {
+    border-radius: 0px;
+}
+
+#drpdwn {
+    min-width: 250px;
+    padding: 14px 14px 14px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.panel {
+    padding: 14px 14px 14px;
+}
+
+#resume.well:hover
+{
+  background-color: #ACACAC;
+}
+
+#resume.well:active
+{
+  background-color: #000;
+}
+
+/*.scroller.scrolling {*/
+/*    position: fixed;*/
+/*    top: 1em;*/
+/*    float: left;*/
+/*}*/
+
+
+@media (max-width: 767px) {
+    #jobdesc.text-right { text-align: center; }
+    #jobdesc.text-left { text-align: center; }
+    .affix {
+        position: static;
+    }
+}

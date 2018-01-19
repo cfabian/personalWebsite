@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Custom style override -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/e52e9e038d.js"></script>
+    
+    <script>
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+        
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    </script>
+</head>
+
+<title>Caleb Fabian</title>
+
+<div class="col-md-12">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    	<div class="container-fluid">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand active" href="#top">Caleb Fabian</a>
+    		</div>
+    		<div class="collapse navbar-collapse" id="navbar">
+    			<ul class="nav navbar-nav">
+    			    <li><a href="#aboutme">About Me</a></li>
+    				<li><a href="#workexperience">Work Experience</a></li>
+    				<li><a href="#educationalexperience">Educational Experience</a></li>
+    				<li><a href="#personalexperience">Personal Experience</a></li>
+    			</ul>
+    			<ul class="nav navbar-nav navbar-right">
+    
+    				<li><a href="https://github.com/cfabian" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+    				<li class="dropdown">
+    				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+    				<ul id="drpdwn" class="dropdown-menu">
+    					<li>Email: N/A</li>
+    					<li>Phone: N/A</li>
+    				</ul>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
+    </nav>
+</div>
+<body id="top">
+<div class="col-sm-12" style="margin-top:60px"></div>
+<div class="container-fluid text-center">
+	<div class="row content">
+		
+        <a href="Caleb_Fabian_Resume.pdf" target="_blank">
+    		<div id="scrollerWrapper" class="col-sm-2">
+    			<div id="resume" class="well scroller" data-spy="affix">
+    				<h3>Download Resume <i class="fa fa-cloud-download" aria-hidden="true"></i></h3>
+    			</div>
+    		</div>
+    	</a>
+
+		<div class="col-sm-8">
+			<div id="aboutme" class="page-header">
+				<h2>About Me</h2>
+			</div>
+			<div class="col-md-12">
+    			<div class="panel panel-default">
+    				<p class="text-left">I am a Computer Science student at <a href="https://www.utk.edu/" target="_blank">The University of Tennessee, Knoxville</a> minoring in Cyber Security and will be graduating in May of 2018. At UTK, I work for the <a href="https://oit.utk.edu/" target="_balnk">Information Technology department</a> managing computer labs around campus. During the summer of 2017, I interned at <a href="http://www.foodtodonate.com/" target="_blank">Food Donation Connection LLC</a>. While there I created internal web pages to allow the call center to access client information with ease. In my free time, I enjoy managing personal servers, scraping web pages, writing bots, breaking operating systems, and automating as many processes as I can.</p>
+    			</div>
+			</div>
+			
+			<div class="clearfix"></div>
+			
+			<div id="workexperience" class="page-header">
+				<h2>Work Experience</h2>
+			</div>
+			
+			<div class="col-md-6">
+    			<div class = "panel panel-default col-md-12">
+    			    <div class="page-header">
+        				<h3>Food Donation Connection LLC</h3>
+        			</div>
+        			<div class="col-sm-8"><h4 id="jobdesc" class="text-left">Software Developement Intern</h4></div>
+        			<div class="col-sm-4"><h4 id="jobdesc" class="text-right">5/2017 - 8/2017</h4></div>
+        			<div class="col-sm-12">
+        				<p class="text-justify">I spent the summer of 2017 working as a software development intern at Food Donation Connection LLC (FDC) in Farragut, Tennessee. While working there, I got experience developing for a production environment and working with other deparments to create a product. I aided FDC in developing their staff's portal website that would allow staff members to view and manipulate client information, making their dailey workflow more efficient. I also helped to develope and maintain a software that allows clients to input information that would be verified and entered into a database. Development was done using Node.js for server side code, Angular and jQuery for client side code, Microsoft SQL Server for database management and HTML and Bootstrap for user interfaces. Docker containers were also used and managed to create a fully modular and scalable system.</p>
+        				<ul>
+        				    <li><div class="text-left">Web development using Javascript and Bootstrap</div></li>
+        				    <li><div class="text-left">Web server design and implementation using Node.js stack</div></li>
+        				    <li><div class="text-left">Creating and updating docker containers</div></li>
+        				    <li><div class="text-left">Agile development</div></li>
+        				    <li><div class="text-left">Database development using MSSQL Server</div></li>
+        				</ul>
+        			</div>
+    			</div>
+    		</div>
+			
+			<div class="col-md-6">
+    			<div class = "panel panel-default col-md-12">
+    			    <div class="page-header">
+        				<h3>University of Tennessee, Knoxville, Office of Information Technology</h3>
+        			</div>
+        			<div class="col-sm-6"><h4 id="jobdesc" class="text-left">Lab Manager</h4></div>
+        			<div class="col-sm-6"><h4 id="jobdesc" class="text-right">8/2016 - Present</h4></div>
+        			<div class="col-sm-12">
+        				<p class="text-justify">I worked for the Office of Information Technology at the University of Tennessee, Knoxvile my entire time attending ay the university. For my first two years I worked at a help desk in the computer labs assisting students with anything they needed while in the labs. In 2016 I got a promotion to be a manager. As a manager, I had to provide aid to the student assistants and help them solve problems they could not solve on thier own. I also had to maintain and deploy new operating system builds to lab computers. This included over 50 labs around campus including the university's main library on campus that had over 100 Macs and PCs.</p>
+        				<ul>
+        				    <li><div class="text-left">Install and maintain computers, scanners and printers</div></li>
+        				    <li><div class="text-left">Assistant Systems Group with operating system build changes</div></li>
+        				    <li><div class="text-left">Provide problem resolution for all logged problems</div></li>
+        				    <li><div class="text-left">Monitor the labs providing assistance to Student Assistants as necessary</div></li>
+        				    <li><div class="text-left">Inventory equipment and supplies</div></li>
+        				    <li><div class="text-left">Train Student Assistants</div></li>
+        				</ul>
+        			</div>
+    			</div>
+    		</div>
+    		
+    		<div class="clearfix"></div>
+		
+    		<div id="educationalexperience" class="page-header">
+    			<h2>Educational Experience</h2>
+    		</div>
+			<div class="col-md-12">
+    			<div class="panel panel-default col-sm-12">
+    			    <div class="page-header">
+        				<h3>University of Tennessee, Knoxville</h3>
+        			</div>
+        			<h4>Bachalor's in Computer Science with a minor in Cyber Security - 2018</h4>
+    				<p class="text-justify">During my time at the University of Tennessee, Knoxville, I studied Computer Science and Cyber Security. I gained the skills necessary to develope production quality software and work with others to meet a final goal. I also participated in hackathons, sponsored by volhacks, where we worked in groups to develope a project in one weekend, and capture the flag events, sponsored by HackUTK, where we raced to complete hacking challanges.</p>
+    				<p><b>Relavent Courses</b></p>
+    				<div class="col-sm-6">
+						<ul>
+						    <li><div class="text-left">Data Structures and Algorithms I/II</div></li>
+						    <li><div class="text-left">Systems Programming</div></li>
+						    <li><div class="text-left">Alogrithm Analysis/Automata</div></li>
+						    <li><div class="text-left">Operating Systems</div></li>
+						    <li><div class="text-left">Programming Languages/Systems</div></li>
+						    <li><div class="text-left">Fundamentals of Digital Archeology</div></li>
+						    <li><div class="text-left">Applied Cryptography</div></li>
+						</ul>
+    				</div>
+    				<div class="col-sm-6">
+						<ul>
+						    <li><div class="text-left">Intro to Computer Security</div></li>
+						    <li><div class="text-left">Network Security</div></li>
+						    <li><div class="text-left">Cyber-Physical System Security</div></li>
+						    <li><div class="text-left">Bio-Informatics</div></li>
+						    <li><div class="text-left">Probability and Random Variables</div></li>
+						    <li><div class="text-left">Discrete Structures</div></li>
+						</ul>
+    				</div>
+    			</div>
+			</div>
+    		
+    		<div class="clearfix"></div>
+		
+    		<div id="personalexperience" class="page-header">
+    			<h2>Personal Experience</h2>
+    		</div>
+			<div class="col-md-12">
+    			<div class="panel panel-default col-sm-12">
+    				<p class="text-justify">At home I manage multiple servers with the purposes of file storage, system backup storage, local media distribution and managment, database storage, and virtual machine deployment. These severs are a mix of Windows server 2016 (as of 2018) and Ubuntu server. This also involves writing scripts to automate processes and startup activities.</p>
+    				<p class="text-justify">I also like to write web scrapers and crawlers for the purpose of archival and data analytics.</p>
+    			</div>
+			</div>
+
+		</div>
+
+		<div id="scrollerWrapper" class="col-sm-2">
+			<div class="well scroller" data-spy="affix">
+				<h3>Skills</h3>
+				<ul>
+				    <li><div class="text-left">Programming experience with C/C++, Java, Python, Javascript (server and client) and PHP</div></li>
+				    <li><div class="text-left">Web Design experience with HTML5, CSS and Bootstrap</div></li>
+				    <li><div class="text-left">Experience with SQL (Relational) databases including MySQL and MSSQL Server</div></li>
+				    <li><div class="text-left">Experience with noSQL (non-Relational) databases including MongoDB and dynamoDB</div></li>
+				    <li><div class="text-left">Version Control experience with Git, SVN and Plastic SCM</div></li>
+				    <li><div class="text-left">Experience with virtual machines in VirtualBox, Hyper-V and vmware</div></li>
+				    <li><div class="text-left">Linux and Windows server experience</div></li>
+				    <li><div class="text-left">Linux shell scripting and Windows batch scripting experience</div></li>
+				    <li><div class="text-left">AWS (Amazon Web Services) including: S3, Rout53, dynamoDB, IAM, CloudWatch, EC2, CloudFront</div></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer class="container-fluid text-center">
+	<p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 Caleb Fabian</p>
+</footer>
+</body>
+</html>
