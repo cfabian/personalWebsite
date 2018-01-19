@@ -1,2 +1,6 @@
 User-agent: *
-Allow: /index.html
+Disallow: /css/
+Disallow: /img/
+Disallow: /mail/
+Disallow: /Caleb_Fabian_Resume.pdf
+Disallow: /error.html
