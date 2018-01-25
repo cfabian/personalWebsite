@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+    		$(document).ready(function () {
+    		    var randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+    		    $('canvas').css({
+                    'background-color' : '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6)
+                });
+        		var color = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+        		var $canvas = $("canvas");
+                //Select the first, only canvas element. Select the actual HTML element using the array syntax [index], get the 2d context.
+                var context = $canvas[0].getContext("2d");
+                var lastEvent;
+                var mouseDown = false;
+    		    $canvas.mousedown(function(e) {
+                    lastEvent = e;
+                    mouseDown = true;
+                
+                }).mousemove(function(e) {
+                    if (mouseDown) {
+                        //Draw lines
+                        context.beginPath();
+                        context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
+                        context.lineTo(e.offsetX, e.offsetY);
+                        context.strokeStyle = color;
+                        context.stroke();
+                        lastEvent = e;
+                    }
+                }).mouseup(function() {
+                    mouseDown = false;
+                }).mouseleave(function() {
+                    $canvas.mouseup();
+                });
+            });
+		</script>
+		<style>
+		    html, body {
+                width:  100%;
+                height: 100%;
+                overflow: hidden;
+                margin: 0px;
+            }
+		</style>
+	</head>
+	<body>
+	    <canvas width="1920" height="1080" style="margin: 0; padding: 0;"></canvas>
+	</body>
+</html>
