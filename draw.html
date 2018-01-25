@@ -10,11 +10,16 @@
                     'background-color' : '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6)
                 });
         		var color = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
-        		var $canvas = $("canvas");
-                //Select the first, only canvas element. Select the actual HTML element using the array syntax [index], get the 2d context.
+        		var $canvas = document.getElementById('drawing');
+        		$canvas.width = ($(window).width());
+        		$canvas.height = $(window).height();
+        		$canvas = $('canvas');
                 var context = $canvas[0].getContext("2d");
+                console.log($canvas.width());
+                console.log($canvas.height());
                 var lastEvent;
                 var mouseDown = false;
+                // Handles mouse click events
     		    $canvas.mousedown(function(e) {
                     lastEvent = e;
                     mouseDown = true;
@@ -34,18 +39,48 @@
                 }).mouseleave(function() {
                     $canvas.mouseup();
                 });
+                
+                // Handles touch events
+                $canvas.on('touchstart', function(e) {
+                    lastEvent = e;
+                    mouseDown = true;
+                
+                }).on('touchmove', function(e) {
+                    if (mouseDown) {
+                        //Draw lines
+                        context.beginPath();
+                        context.moveTo(lastEvent.touches[0].pageX, lastEvent.touches[0].pageY);
+                        context.lineTo(e.touches[0].pageX, e.touches[0].pageY);
+                        context.strokeStyle = color;
+                        context.stroke();
+                        lastEvent = e;
+                    }
+                }).on('touchend', function() {
+                    mouseDown = false;
+                }).on('touchcancel', function() {
+                    $canvas.mouseup();
+                });
             });
 		</script>
 		<style>
+		    * {
+		        margin: 0;
+		        padding: 0;
+		    }
+		    
 		    html, body {
                 width:  100%;
                 height: 100%;
-                overflow: hidden;
-                margin: 0px;
+                /*overflow: hidden;*/
+                /*margin: 0px;*/
+            }
+            
+            canvas {
+                display: block;
             }
 		</style>
 	</head>
 	<body>
-	    <canvas width="1920" height="1080" style="margin: 0; padding: 0;"></canvas>
+	    <canvas id="drawing"></canvas>
 	</body>
 </html>
