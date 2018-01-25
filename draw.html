@@ -5,20 +5,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script>
     		$(document).ready(function () {
-    		    var randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+    		    var bgColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+    		    var color1 = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+    		    var color2 = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
     		    $('canvas').css({
-                    'background-color' : '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6)
+                    'background-color' : bgColor
                 });
-        		var color = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
-        		var $canvas = document.getElementById('drawing');
-        		$canvas.width = ($(window).width());
-        		$canvas.height = $(window).height();
+        		
+        		// Changes the screen size to the current window size
+        		var $canvasId = document.getElementById('drawing');
+        		$canvasId.width = $(window).width();
+        		$canvasId.height = $(window).height();
+        		
+        		$(window).resize(function() {
+            		$canvasId.width = $(window).width();
+            		$canvasId.height = $(window).height();
+        		});
+        		
         		$canvas = $('canvas');
                 var context = $canvas[0].getContext("2d");
-                console.log($canvas.width());
-                console.log($canvas.height());
+                
                 var lastEvent;
                 var mouseDown = false;
+                
                 // Handles mouse click events
     		    $canvas.mousedown(function(e) {
                     lastEvent = e;
@@ -30,7 +39,16 @@
                         context.beginPath();
                         context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
                         context.lineTo(e.offsetX, e.offsetY);
-                        context.strokeStyle = color;
+                        if (e.which == 1) {
+                            context.strokeStyle = color1;
+                            context.lineWidth = 3;
+                        } else if (e.which == 2) {
+                            context.strokeStyle = bgColor;
+                            context.lineWidth = 10;
+                        } else {
+                            context.strokeStyle = color2;
+                            context.lineWidth = 3;
+                        }
                         context.stroke();
                         lastEvent = e;
                     }
