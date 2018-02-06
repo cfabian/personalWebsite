@@ -5,6 +5,9 @@ $(document).ready(function () {
     $('canvas').css({
         'background-color' : bgColor
     });
+    
+    document.querySelector('.instructions .color1').innerHTML = color1;
+    document.querySelector('.instructions .color2').innerHTML = color2;
 	
 	// Changes the screen size to the current window size
 	var $canvasId = document.getElementById('drawing');
@@ -55,11 +58,13 @@ $(document).ready(function () {
     
     // Handles touch events
     $canvas.on('touchstart', function(e) {
+        e.preventDefault();
         $('.instructions').fadeOut('slow')
         lastEvent = e;
         mouseDown = true;
     
     }).on('touchmove', function(e) {
+        e.preventDefault();
         if (mouseDown) {
             //Draw lines
             context.beginPath();
